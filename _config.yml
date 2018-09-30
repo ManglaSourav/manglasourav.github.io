@@ -1,15 +1,28 @@
-# Site settings
-title:        "block-Log"
-description:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor"
-baseurl:      "" # the subpath of your site, e.g. /blog/
-url:          "http://yourdomain.com" # the base hostname & protocol for your site
-permalink:    /:year/:title
-github:       "yourusername"
-twitter:      "yourusername"
-email:        "mail@example.com"
-disqus-id:    "example" #leave blank if you dont want comments.
+title: Sourav Mangla
+description: My Personal Blog
+author: Sourav Mangla
+logo: /hcz-jekyll-blog/static/img/avatar.png
+github: https://github.com/ManglaSourav
+about: Machine learning Enthusiast
 
-# Build settings
-markdown:     kramdown
-sass:
-    style: :compressed
+baseurl: "https://codeasashu.github.io/hcz-jekyll-blog"
+url: "https://codeasashu.github.io/hcz-jekyll-blog"
+
+allowsearch: true
+
+disqus_shortname: aboutashu
+google_analytics: UA-72862926-1
+
+share:
+  twitter_username: \#
+  fb_appid: 000000000000
+
+
+enableTags: true
+tagarray: []
+
+paginate: 20
+per_page: 20
+paginate_path: "/page:num/"
+markdown: kramdown
+gems: [jekyll-paginate, jekyll-gist]
