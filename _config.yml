@@ -5,8 +5,8 @@ logo: /hcz-jekyll-blog/static/img/avatar.png
 github: https://github.com/ManglaSourav
 about: Machine learning Enthusiast
 
-baseurl: "https://codeasashu.github.io/hcz-jekyll-blog"
-url: "https://codeasashu.github.io/hcz-jekyll-blog"
+baseurl: "https://manglasourav.github.io/"
+url: "https://manglasourav.github.io/"
 
 allowsearch: true
 
