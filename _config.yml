@@ -2,11 +2,11 @@ title: Sourav Mangla
 description: My Personal Blog
 author: Sourav Mangla
 logo: static/img/avatar.png
-github: https://github.com/ManglaSourav
+github:
 about: Machine learning Enthusiast
 
-baseurl: "https://ManglaSourav.github.io/"
-url: "https://ManglaSourav.github.io/"
+baseurl: "https://ManglaSourav.github.io"
+url: "https://ManglaSourav.github.io"
 
 allowsearch: true
 
