@@ -1,18 +1,18 @@
 [
   {
     "icon": "fa-facebook",
-    "link": ""
+    "link": "https://www.facebook.com/"
   },
   {
     "icon": "fa-twitter",
-    "link": ""
+    "link": "https://twitter.com/manglasourav"
   },
   {
     "icon": "fa-linkedin",
-    "link": ""
+    "link": "https://www.linkedin.com/in/sourav-mangla-617133129/"
   },
   {
     "icon": "fa-stack-exchange",
-    "link": ""
+    "link": "https://stackexchange.com/"
   }
 ]
