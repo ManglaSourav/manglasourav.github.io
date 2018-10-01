@@ -1,10 +1,9 @@
 title: Sourav Mangla
-description: > # this means to ignore newlines until "baseurl:"
-  This is my blog where I try to explain Machine Learning topics.
-permalink: ':title/'
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-site-twitter: #if your site has a twitter account, enter it here
+description: My Personal Blog
+author: Sourav Mangla
+logo: static/img/avatar.png
+github:
+about: Machine learning Enthusiast
 
 # Author Settings
 author: Sourav Mangla # add your name
