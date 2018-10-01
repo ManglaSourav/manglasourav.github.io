@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>What is One-Hot Encoding! - Hello, world! I'm Sourav Mangla</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Hello, world! I'm Sourav Mangla" property="og:site_name">
+  
+    <meta content="What is One-Hot Encoding!" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="One hot encoding basically transforms categorical features to a format that works better with machine learning algorithms." property="og:description">
+  
+  
+    <meta content="http://localhost:4000/2017-04-06-one-hot-encoding/" property="og:url">
+  
+  
+    <meta content="2017-04-06T16:02:20+05:30" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img/avatar1.png" property="og:image">
+  
+  
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@manglasourav">
+  
+    <meta name="twitter:title" content="What is One-Hot Encoding!">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/2017-04-06-one-hot-encoding/">
+  
+  
+    <meta name="twitter:description" content="One hot encoding basically transforms categorical features to a format that works better with machine learning algorithms.">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/avatar1.png">
+  
+
+	<meta name="description" content="One hot encoding basically transforms categorical features to a format that works better with machine learning algorithms.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/avatar1.png" alt="Sourav Mangla"></a>
+      </div>
+      <div class="author-name">Sourav Mangla</div>
+      <p>I am a computer science engineer focusing on Machine Learning and Deep learning.</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/manglasourav" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/manglasourav" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/sourav-mangla-617133129" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:mangla.sourav96@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2018 &copy; Sourav Mangla</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">What is One-Hot Encoding!</h1>
+        <div class="page-date"><span>2017, Apr 06&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>If you are a Machine Learning or a Deep Learning Enthusiast you might have been reading or hearing this term <strong>One Hot Encoding</strong> a lot.</p>
+
+<p>So what exactly this thing is ?</p>
+
+<p><strong>Origin</strong>-One-hot originally comes from electronics - one-hot meaning there’s only 1 ‘hot’ or ‘on’ value in this list, while the rest are ‘cold’</p>
+
+<p><strong>In Data Science One hot encoding basically transforms categorical features to a format that works better with machine learning algorithms.</strong></p>
+
+<p>```</p>
+
+<p><strong><em>Example:</em></strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>╔═════════════╦════════════════╦
+║ Gender      ║Population      ║
+╠═════════════╬════════════════╣
+║ MALE        ╬       100      ║
+║ FEMALE      ╬       500      ║
+║ Unspecified ╬       50       ║     
+╚═════════════╩════════════════╩
+</code></pre></div></div>
+
+<p>```</p>
+
+<p>Let us say we have a Dataframe with two columns Gender and Population and we convert the Gender column into its Categorical Values so Dataframe now becomes</p>
+
+<p>```</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>╔═════════════╦════════════════╦══════════╗ 
+║ Gender      ║Categoricalvalue║Population║
+╠═════════════╬════════════════╣══════════║ 
+║ MALE        ╬      1         ║ 100      ║
+║ FEMALE      ╬      2         ║ 500      ║
+║ Unspecified ╬      3         ║ 50       ║
+╚═════════════╩════════════════╩══════════╝
+</code></pre></div></div>
+
+<p>```</p>
+
+<p>Now Male is assigned to 1 ,Female to 2 and so on but does that make any sense? I mean are those values appropriate representation of Gender column?</p>
+
+<p><strong>A BIG NO !</strong></p>
+
+<p>Algorithm will interpret that Female is higher than Male as 2&gt;1</p>
+
+<p>Is it a valid interpretation? Sorry Feminists but <strong>NO</strong> its not!</p>
+
+<p><em>jokes apart</em></p>
+
+<p>That does not really make any sense in terms of value because all of them are completely independent features.Algorithm will continue building its prediction based on these interpretation and it won’t predict accurate results</p>
+
+<p><strong>So what should we do?</strong></p>
+
+<p>We need to Encode every categorical value into separate binary variables.</p>
+
+<p>```</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>╔════╦══════╦══════╦════════╦
+║MALE║FEMALE║ Usp  ║  Pop.  ║
+╠════╬══════╬══════╬════════╬
+║ 1  ╬ 0    ╬ 0    ║ 100    ║
+║ 0  ╬ 1    ╬ 0    ║ 500    ║
+║ 0  ╬ 0    ╬ 1    ║ 50     ║
+╚════╩══════╩══════╩════════╝
+</code></pre></div></div>
+
+<p>```</p>
+
+<p>Now every Gender has its own say separately</p>
+
+<p><em>That’s what exactly we need in our society don’t we?</em></p>
+
+<p><strong>When is it beneficial?</strong></p>
+
+<p>This works good with almost every machine learning algorithms. but there are few algorithms that can handle categorical values natively like Decision Trees and Random Forests so they don’t require One-hot encoding but some Clustering and Regression algorithms needs this for better results.</p>
+
+<p><strong>Practical Implementation in Sci-kit Learn</strong></p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span>  <span class="n">OneHotEncoder</span>
+    <span class="n">X</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:]</span>
+    <span class="n">onehotencoder</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">categorical_features</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">array</span><span class="o">&gt;</span><span class="p">)</span> 
+    <span class="c">#onehot encoder to encode those numerical values</span>
+    <span class="c">#&lt;array&gt;=array  of indices to be encode </span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">onehotencoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span></code></pre></figure>
+
+<p>pssss</p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=What is One-Hot Encoding!&url=http://localhost:4000/2017-04-06-one-hot-encoding/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2017-04-06-one-hot-encoding/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/2017-04-06-one-hot-encoding/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//SouravMangla.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>

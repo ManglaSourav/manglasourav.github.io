@@ -1,28 +1,35 @@
 title: Sourav Mangla
-description: My Personal Blog
-author: Sourav Mangla
-logo: /hcz-jekyll-blog/static/img/avatar.png
-github: https://github.com/ManglaSourav
-about: Machine learning Enthusiast
+description: > # this means to ignore newlines until "baseurl:"
+  This is my blog where I try to explain Machine Learning topics.
+permalink: ':title/'
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+site-twitter: #if your site has a twitter account, enter it here
 
-baseurl: "https://ManglaSourav.github.io"
-url: "https://ManglaSourav.github.io"
+# Author Settings
+author: Sourav Mangla # add your name
+author-img: avatar1.png # add your photo
+about-author: I am a computer science engineer focusing on Machine Learning and Deep learning. # add description
+social-twitter: manglasourav
+social-facebook: # add your Facebook handle
+social-github: manglasourav # add your Github handle
+social-linkedin: sourav-mangla-617133129 # add your Linkedin handle
+social-email: mangla.sourav96@gmail.com
 
-allowsearch: true
+# Disqus
+discus-identifier: SouravMangla # add your discus identifier
 
-disqus_shortname: aboutashu
-google_analytics: UA-72862926-1
+# Tracker
+analytics: # Google Analytics
 
-share:
-  twitter_username: \ManglaSourav
-  fb_appid: 000000000000
-
-
-enableTags: true
-tagarray: []
-
-paginate: 20
-per_page: 20
-paginate_path: "/page:num/"
+# Build Settings
 markdown: kramdown
-gems: [jekyll-paginate, jekyll-gist]
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+
+paginate: 8
+paginate_path: "/page/:num"
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
